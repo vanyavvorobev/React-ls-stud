@@ -6,6 +6,7 @@ import { RadioComponent } from "../shared/ui/radio/radio.component";
 import { SwitchComponent } from "../shared/ui/switch/switch.component";
 import "./../shared/styles/typography.css";
 import "./../shared/styles/fonts.css";
+import { LoginPageComponent } from "../pages/login/login-page.component";
 
 const TestComponent: React.FC<{children: React.ReactNode, name: string}> = ({children, name}) => {
 	return (
@@ -15,7 +16,8 @@ const TestComponent: React.FC<{children: React.ReactNode, name: string}> = ({chi
 		</div>
 	)
 }
-export const App = () => {
+
+const TestContur = () => {
 	const [ inputValue, setInputValue ] = React.useState("");
 	const [ isError, setIsError ] = React.useState(false);
 	const [ disabled, setDisabled ] = React.useState(false);
@@ -83,4 +85,9 @@ export const App = () => {
 			</TestComponent>
 		</div>
 	)
+}
+
+
+export const App = () => {
+	return (<LoginPageComponent/>)
 }
